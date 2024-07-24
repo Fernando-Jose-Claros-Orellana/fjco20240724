@@ -11,14 +11,14 @@
             background-color: #f0f0f0;
         }
         .calculator-container {
-            background: linear-gradient(to bottom, #e6f0ff, #cce0ff);
+            background: #c6d9f6;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
         }
         .calculator-container h1 {
-            text-align: center;
+            text-align: left;
             color: #333;
         }
         .calculator-container label {
@@ -46,10 +46,10 @@
             cursor: pointer;
         }
         .calculator-container button[type="submit"] {
-            background-color: #007bff;
+            background-color: #1ba1e2;
         }
         .calculator-container button[type="button"] {
-            background-color: #6c757d;
+            background-color: #1ba1e2;
         }
         .calculator-container p {
             background-color: #d3d3d3;
@@ -77,10 +77,6 @@
             <button type="button" onclick="clearForm()">Limpiar</button>
         </div>
     </form>
-
-    <p id="result-message" th:if="${result != 0}">
-        El resultado de <span th:text="${num1}"></span> - <span th:text="${num2}"></span> es <span th:text="${result}"></span>.
-    </p>
 </div>
 <script>
     function clearForm() {
@@ -88,7 +84,6 @@
         document.getElementById('num1').value = '';
         document.getElementById('num2').value = '';
         document.getElementById('result').value = '';
-        document.getElementById('result-message').innerHTML = '';
     }
 </script>
 </body>
