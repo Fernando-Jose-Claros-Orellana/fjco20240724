@@ -1,8 +1,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 <h1>Calculadora</h1>
-<h1>Sum Calculator</h1>
-<form th:action="@{/calculadora/suma}" method="post">
+<h1>Resta</h1>
+<form th:action="@{/calculadora/resta}" method="post">
     <label for="num1">Number 1:</label>
     <input type="number" id="num1" name="num1" th:value="${num1}"><br>
 
@@ -13,7 +13,7 @@
 </form>
 
 <p th:if="${result != 0}">
-    El resultado de <span th:text="${num1}"></span> + <span th:text="${num2}"></span> es <span th:text="${result}"></span>.
+    El resultado de <span th:text="${num1}"></span> - <span th:text="${num2}"></span> es <span th:text="${result}"></span>.
 </p>
 </body>
 </html>
